@@ -23,7 +23,6 @@ public class SeleniumWebDriverManagerTests {
     private WebDriver driver;
 
 
-
     @BeforeEach
     public void setUp() {
         String browser = System.getProperty("browser");
@@ -48,7 +47,7 @@ public class SeleniumWebDriverManagerTests {
     @Test
     public void authenticationFormsTest() throws InterruptedException {
 
-        String firstName= "Ivan";
+        String firstName = "Ivan";
         String lastName = "Ivanov";
         String email = "Ivanov@yandex.ru";
         String mobile = "9135555555";
@@ -57,7 +56,7 @@ public class SeleniumWebDriverManagerTests {
         String state = "Uttar Pradesh";
         String city = "Agra";
         String subject = "English";
-        File file=new File("src/test/resources/img.png");
+        File file = new File("src/test/resources/img.png");
 
         WebElement inputFirstName = driver.findElement(By.id("firstName"));
         inputFirstName.sendKeys(firstName);
@@ -136,6 +135,7 @@ public class SeleniumWebDriverManagerTests {
 
         Thread.sleep(6000);
     }
+
     @AfterEach
     public void tearDown() {
         driver.quit();
